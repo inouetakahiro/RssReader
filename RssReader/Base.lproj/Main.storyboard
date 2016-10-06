@@ -18,11 +18,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="ZVr-pa-LbH" kind="relationship" relationship="viewControllers" id="6D0-Q5-z0a"/>
+                        <segue destination="e1L-s8-vC7" kind="relationship" relationship="viewControllers" id="MsP-mb-0Uy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lsb-Lk-h80" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-273" y="-36"/>
+            <point key="canvasLocation" x="-578" y="473"/>
         </scene>
         <!--一覧-->
         <scene sceneID="5VG-Pa-Ya4">
@@ -45,7 +46,7 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kB1-eY-cjK">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kB1-eY-cjK">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="23" id="BZg-ab-j9r"/>
                                             </constraints>
@@ -82,6 +83,47 @@
             </objects>
             <point key="canvasLocation" x="1488.8" y="-36.431784107946029"/>
         </scene>
+        <!--ブックマーク-->
+        <scene sceneID="xVj-83-DEh">
+            <objects>
+                <tableViewController id="pi6-rx-S8T" customClass="BookumarkViewController" customModule="RssReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vNq-0l-kxF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookmarkViewCell" textLabel="zaM-LD-Dc3" style="IBUITableViewCellStyleDefault" id="bd0-OQ-9v9">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bd0-OQ-9v9" id="5Nv-4s-GQu">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zaM-LD-Dc3">
+                                            <frame key="frameInset" minX="15" width="345" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="PcT-vm-cwq" kind="show" id="O6E-9q-xxg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pi6-rx-S8T" id="IyJ-tx-bHa"/>
+                            <outlet property="delegate" destination="pi6-rx-S8T" id="AeD-2x-tWr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ブックマーク" id="eYi-D3-Rco"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xwH-IA-JJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489" y="956"/>
+        </scene>
         <!--Detail View Controller-->
         <scene sceneID="jmg-sU-U2D">
             <objects>
@@ -106,13 +148,20 @@
                             <constraint firstItem="sYh-ah-FM1" firstAttribute="leading" secondItem="Lqi-s4-RBm" secondAttribute="leading" id="vHE-th-jcm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Wew-bA-USZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="op7-3O-bYm">
+                            <connections>
+                                <action selector="addBookmark:" destination="PcT-vm-cwq" id="JZB-2U-dQB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="sYh-ah-FM1" id="PyY-gz-oSm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2pk-Tx-ZtX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2517.5999999999999" y="-36.431784107946029"/>
+            <point key="canvasLocation" x="2618" y="438"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N6h-k1-fbm">
@@ -133,5 +182,27 @@
             </objects>
             <point key="canvasLocation" x="549.60000000000002" y="-36.431784107946029"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2tZ-lI-FuI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e1L-s8-vC7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="MBO-kc-cCK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VMj-xC-VQV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pi6-rx-S8T" kind="relationship" relationship="rootViewController" id="GE3-uT-XYK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RuZ-78-Nfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="550" y="956"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9AN-Yh-H9k"/>
+    </inferredMetricsTieBreakers>
 </document>

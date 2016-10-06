@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class DetailViewController: UIViewController {
     
@@ -23,6 +24,23 @@ class DetailViewController: UIViewController {
         if let url = URL(string: i.link) {
             let request = URLRequest(url: url)
             webView.loadRequest(request)
+        }
+    }
+    @IBAction func addBookmark(_ sender: AnyObject) {
+        
+        guard let i = item else {
+            return
+        }
+        
+        let bookmark = Bookmark()
+        bookmark.title = i.title
+        bookmark.detail = i.detail
+        bookmark.link = i.link
+        bookmark.date = NSDate()
+        
+        let reaml = try! Realm()
+        try! reaml.write {
+            reaml.add(bookmark)
         }
     }
 }

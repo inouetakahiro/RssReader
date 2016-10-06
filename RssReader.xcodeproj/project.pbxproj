@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		31E22698BCC374476D3DC146 /* Pods_RssReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF964655D7BAF918BB0A5C4D /* Pods_RssReader.framework */; };
+		AA54E0531DA61CA7001DF0CE /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA54E0521DA61CA7001DF0CE /* BookmarkViewController.swift */; };
+		AA54E0551DA61FBE001DF0CE /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA54E0541DA61FBE001DF0CE /* Bookmark.swift */; };
 		AA8FFC261DA3445E008153CD /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8FFC251DA3445E008153CD /* Setting.swift */; };
 		AA8FFC281DA344B4008153CD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8FFC271DA344B4008153CD /* Item.swift */; };
 		AABCE7521DA37D6D00C64168 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABCE7511DA37D6D00C64168 /* DetailViewController.swift */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		A0CBECE5EA5C8EBAEBF27D87 /* Pods-RssReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-RssReader/Pods-RssReader.release.xcconfig"; sourceTree = "<group>"; };
+		AA54E0521DA61CA7001DF0CE /* BookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		AA54E0541DA61FBE001DF0CE /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		AA8FFC251DA3445E008153CD /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		AA8FFC271DA344B4008153CD /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		AABCE7511DA37D6D00C64168 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 				AA8FFC251DA3445E008153CD /* Setting.swift */,
 				AA8FFC271DA344B4008153CD /* Item.swift */,
 				AABCE7511DA37D6D00C64168 /* DetailViewController.swift */,
+				AA54E0521DA61CA7001DF0CE /* BookmarkViewController.swift */,
+				AA54E0541DA61FBE001DF0CE /* Bookmark.swift */,
 			);
 			path = RssReader;
 			sourceTree = "<group>";
@@ -225,6 +231,8 @@
 				AAC79DFA1DA23A930046DC4C /* ListViewController.swift in Sources */,
 				AABCE7521DA37D6D00C64168 /* DetailViewController.swift in Sources */,
 				AAC79DE81DA235AE0046DC4C /* AppDelegate.swift in Sources */,
+				AA54E0531DA61CA7001DF0CE /* BookmarkViewController.swift in Sources */,
+				AA54E0551DA61FBE001DF0CE /* Bookmark.swift in Sources */,
 				AA8FFC261DA3445E008153CD /* Setting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
