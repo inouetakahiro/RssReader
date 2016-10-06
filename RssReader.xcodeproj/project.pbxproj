@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31E22698BCC374476D3DC146 /* Pods_RssReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF964655D7BAF918BB0A5C4D /* Pods_RssReader.framework */; };
 		AA8FFC261DA3445E008153CD /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8FFC251DA3445E008153CD /* Setting.swift */; };
 		AA8FFC281DA344B4008153CD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8FFC271DA344B4008153CD /* Item.swift */; };
 		AABCE7521DA37D6D00C64168 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABCE7511DA37D6D00C64168 /* DetailViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0CBECE5EA5C8EBAEBF27D87 /* Pods-RssReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-RssReader/Pods-RssReader.release.xcconfig"; sourceTree = "<group>"; };
 		AA8FFC251DA3445E008153CD /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		AA8FFC271DA344B4008153CD /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		AABCE7511DA37D6D00C64168 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		AAC79DF11DA235AE0046DC4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAC79DF31DA235AE0046DC4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAC79DF91DA23A930046DC4C /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		CF964655D7BAF918BB0A5C4D /* Pods_RssReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RssReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE6A52B12047361C003234A7 /* Pods-RssReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RssReader/Pods-RssReader.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31E22698BCC374476D3DC146 /* Pods_RssReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25B1A960C36760875AAC025D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF964655D7BAF918BB0A5C4D /* Pods_RssReader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64BA94356DCB7671578673D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE6A52B12047361C003234A7 /* Pods-RssReader.debug.xcconfig */,
+				A0CBECE5EA5C8EBAEBF27D87 /* Pods-RssReader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AAC79DDB1DA235AD0046DC4C = {
 			isa = PBXGroup;
 			children = (
 				AAC79DE61DA235AE0046DC4C /* RssReader */,
 				AAC79DE51DA235AE0046DC4C /* Products */,
+				64BA94356DCB7671578673D3 /* Pods */,
+				25B1A960C36760875AAC025D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAC79DF61DA235AE0046DC4C /* Build configuration list for PBXNativeTarget "RssReader" */;
 			buildPhases = (
+				EFFCBDE9D838A569D5665E5A /* [CP] Check Pods Manifest.lock */,
 				AAC79DE01DA235AD0046DC4C /* Sources */,
 				AAC79DE11DA235AD0046DC4C /* Frameworks */,
 				AAC79DE21DA235AD0046DC4C /* Resources */,
+				220B2653F263F732F69CD3B5 /* [CP] Embed Pods Frameworks */,
+				6C1ED23E8915321D35B05F0D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		220B2653F263F732F69CD3B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RssReader/Pods-RssReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C1ED23E8915321D35B05F0D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RssReader/Pods-RssReader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFFCBDE9D838A569D5665E5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AAC79DE01DA235AD0046DC4C /* Sources */ = {
@@ -269,6 +344,7 @@
 		};
 		AAC79DF71DA235AE0046DC4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE6A52B12047361C003234A7 /* Pods-RssReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FGJN9Q2KKL;
@@ -283,6 +359,7 @@
 		};
 		AAC79DF81DA235AE0046DC4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0CBECE5EA5C8EBAEBF27D87 /* Pods-RssReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FGJN9Q2KKL;
