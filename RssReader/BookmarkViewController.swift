@@ -14,6 +14,12 @@ class BookumarkViewController: UITableViewController {
     
     var bookmarks: Results<Bookmark>?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+//        self.title = "TableView Test"
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -47,6 +53,21 @@ class BookumarkViewController: UITableViewController {
             
             let controller = segue.destination as! DetailViewController
             controller.item = item
+        }
+    
+    }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            print("削除")
+//            print(indexPath[1])
+            
+            let realm = try! Realm()
+            try! realm.write {
+//                realm.deleteAll()
+                realm.delete((bookmarks?[indexPath[1]])!)
+            }
+            tableView.reloadData()
         }
     }
 }
